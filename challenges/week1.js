@@ -57,23 +57,45 @@ function reverseWord(word) {
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Add your code here!
+  
 }
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
+  let count=0;
+  for(i=0;i<users.length; i++){
+    if (users.type[i]==="Linux"){
+count +=1;}
+return count;
+  }
 }
 
 function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
+    //mean score is avg of numbers
+    let sum=0;
+    for (i=0;i<=scores.length; i++){
+      sum+=scores;
+    } 
+    let meanscore= Number(sum/scores.length).toFixed(2);
+    return meanscore;
 }
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+  // return fizz if no is divisible by 3
+  //returns buzz if number is divisible by 5
+  //returns number is neither
+  //returns fizzbuzz if number is divisible by 3 and 5
+  if (n%3===0 && n%5===0){
+    return ("fizzbuzz") 
+  } else if (n% 5===0){
+    return ("buzz")
+  } else if (n%3===0){
+    return ("fizz") 
+  } else return (n);
 }
+
 
 module.exports = {
   capitalize,
