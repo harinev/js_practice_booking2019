@@ -57,30 +57,43 @@ function reverseWord(word) {
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  
-}
+    let phrases = [];
+    for (let i = 0; i < words.length; i++) {
+      const listOfWords = words[i]
+      const reverseWords = listOfWords.split("").reverse().join("");
+      phrases.push(reverseWords)
+    }
+    return phrases
+ }
+ 
+ 
+ 
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  let count=0;
-  for(i=0;i<users.length; i++){
-    if (users.type[i]==="Linux"){
-count +=1;}
-return count;
+  let numOfLinuxUsers = 0;
+  users.forEach(function (person) {
+    if (person.type === "Linux") {
+      numOfLinuxUsers++
+    }
   }
-}
-
-function getMeanScore(scores) {
+  )
+  return numOfLinuxUsers ++
+ }
+ function getMeanScore(scores) {
   if (scores === undefined) throw new Error("scores is required");
-    //mean score is avg of numbers
-    let sum=0;
-    for (i=0;i<=scores.length; i++){
-      sum+=scores;
-    } 
-    let meanscore= Number(sum/scores.length).toFixed(2);
-    return meanscore;
-}
-
+  var sum = 0;
+  var count = scores.length;
+  for (var i = 0; i < count; i++) {
+    sum = sum + scores[i];
+  }
+  const mean = sum / count
+  if (sum % count === 0) {
+    return mean
+  } else {
+    return Number(mean.toFixed(2))
+  }
+ }
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
   // return fizz if no is divisible by 3
