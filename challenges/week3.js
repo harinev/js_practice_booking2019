@@ -1,11 +1,28 @@
 function getSquares(nums) {
   if (nums === undefined) throw new Error("nums is required");
-  // Your code here!
+  let sqrNo=[];
+  //getSquares.foreach(function(i){
+   for(let i=0; i<nums.length; i++){
+    let sqri= nums[i]*nums[i];
+    sqrNo.push(sqri);
+
+  }  
+  return sqrNo;
 }
 
 function camelCaseWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Your code here!
+  //for each first letter of index >0, to upper case first letter
+  //replace and return
+  let finalWords=(words[0]);
+  for(let i=1; i<words.length; i++){
+    let capword="";
+  capword=words[i].replace(words[i][0], function(x){
+    return (words[i][0]).toUpperCase()
+  })
+    finalWords+=capword;
+  }
+  return finalWords; 
 }
 
 function getTotalSubjects(people) {
