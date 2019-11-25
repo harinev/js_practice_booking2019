@@ -64,8 +64,8 @@ function duplicateNumbers(arr1, arr2) {
     arr2.forEach(function (n2) {
       if (n1 === n2) {
         if (arr3.includes(n1)) {
-          arr3.push(n1)
-        }
+          
+        } else arr3.push(n1)
       }
     })
   })
