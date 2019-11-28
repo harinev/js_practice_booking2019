@@ -1,12 +1,22 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  const arr = [];
+  nums.forEach(function (item) {
+    if (item < 1) {
+      arr.push(item);
+    }
+  }) 
+  return arr
 }
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
+  names.forEach(function(x){
+    if(x[0]===char){
+      be
+    }
+  })
 }
 
 function findVerbs(words) {
