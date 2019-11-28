@@ -36,9 +36,9 @@ function findVerbs(words) {
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
- let arr=[] 
-  nums.forEach(function(x){
-    if(Number.isInteger(x)===true){
+  let arr = []
+  nums.forEach(function (x) {
+    if (Number.isInteger(x) === true) {
       arr.push(x)
     }
   })
@@ -47,8 +47,8 @@ function getIntegers(nums) {
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  let arr=[]
-  users.forEach(function(item){
+  let arr = []
+  users.forEach(function (item) {
     arr.push(item.data.city.displayName)
   })
   return arr
@@ -56,7 +56,10 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  let arr = nums.map(function (item) {
+    return +Math.sqrt(item).toFixed(2)
+  })
+  return arr
 }
 
 function findSentencesContaining(sentences, str) {
