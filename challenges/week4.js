@@ -5,18 +5,20 @@ function findSmallNums(nums) {
     if (item < 1) {
       arr.push(item);
     }
-  }) 
+  })
   return arr
 }
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  names.forEach(function(x){
-    if(x[0]===char){
-      be
+  let arr = []
+  names.forEach(function (name) {
+    if (name[0] === char) {
+      arr.push(name);
     }
   })
+  return arr
 }
 
 function findVerbs(words) {
