@@ -23,12 +23,26 @@ function findNamesBeginningWith(names, char) {
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
+  let arr = []
+  words.forEach(function (item) {
+    let arrSplit = []
+    arrSplit = item.split(' ')
+    if (arrSplit[0] === "to") {
+      arr.push(item)
+    }
+  })
+  return arr
 }
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+ let arr=[] 
+  nums.forEach(function(x){
+    if(Number.isInteger(x)===true){
+      arr.push(x)
+    }
+  })
+  return arr
 }
 
 function getCities(users) {

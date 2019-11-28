@@ -31,7 +31,7 @@ describe.only("findNamesBeginningWith", () => {
   });
 });
 
-describe("findVerbs", () => {
+describe.only("findVerbs", () => {
   test("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
     const words = [
       "to eat",
@@ -58,7 +58,7 @@ describe("findVerbs", () => {
   });
 });
 
-describe("getIntegers", () => {
+describe.only("getIntegers", () => {
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
@@ -67,7 +67,7 @@ describe("getIntegers", () => {
   });
 });
 
-describe("getCities", () => {
+describe.only("getCities", () => {
   test("returns an array of the cities of each user", () => {
     const users = [
       {
