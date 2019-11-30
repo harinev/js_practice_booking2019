@@ -82,7 +82,7 @@ function findSentencesContaining(sentences, str) {
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   let longArr = []
-  triangles.forEach(function (x) {
+  triangles.map(function (x) {
     let localArr = x
     longArr.push(Math.max.apply(null, localArr))
   })
