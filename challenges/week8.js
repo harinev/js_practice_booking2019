@@ -46,7 +46,14 @@ const sumArrays = arrs => {
 
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
+  //let newArr=[]
+  if (arr.length>2){
+    first=arr.shift()
+    last=arr.pop()
+    arr.unshift(last)
+    arr.push(first)
+  }
+  return arr
 };
 
 const findNeedle = (haystack, searchTerm) => {
@@ -55,7 +62,7 @@ const findNeedle = (haystack, searchTerm) => {
   // Your code here!
 };
 
-str="hEllo world Hello HELLO!"
+
 const getWordFrequencies = str => {
   if (str === undefined) throw new Error("str is required");
   const frequencies={}
