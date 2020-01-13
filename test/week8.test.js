@@ -61,7 +61,7 @@ describe("reverseNumber", () => {
   });
 });
 
-describe("sumArrays", () => {
+describe.only("sumArrays", () => {
   test("returns the total of the numbers in all sub arrays", () => {
     const arrs = [[1, 2, 3], [6, 3, 1], [1], [9, 10], [3, 5]];
     expect(sumArrays(arrs)).toBe(44);
@@ -139,7 +139,7 @@ describe("findNeedle", () => {
   });
 });
 
-describe.only("getWordFrequencies", () => {
+describe("getWordFrequencies", () => {
   test("returns the frequencies of each word in a string", () => {
     expect(getWordFrequencies("hello world")).toEqual({
       hello: 1,

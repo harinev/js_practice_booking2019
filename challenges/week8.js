@@ -2,14 +2,10 @@ const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
   // find the num in the array and console the num+1
-  let ans = "null"
+  let ans = null
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === n) {
-      if (nums[i + 1] !== null) {
-        ans = nums[i + 1]
-      } else {
-        ans = "null"
-      }
+         (nums[i + 1] !== undefined)? ans = nums[i + 1] : ans = null
     }
   } return ans
 };
@@ -39,7 +35,13 @@ const reverseNumber = n => {
 
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
-  // Your code here!
+  let total =0
+  arrs.forEach(function(num){
+    num.forEach(function(n){
+      total+=n
+    })    
+  });
+  return total
 };
 
 const arrShift = arr => {
@@ -59,13 +61,12 @@ const getWordFrequencies = str => {
   const frequencies={}
   let str1=str.replace(/[?,'!']/g, "")
   let splitWord=str1.toLowerCase().split(" ")
-  console.log(splitWord)
-   for (let i=0; i<splitWord.length; i++){
+  for (let i=0; i<splitWord.length; i++){
      let word=splitWord[i]
      if(frequencies[word]===undefined){
        frequencies[word]=1
      } else {frequencies[word]+=1}
-   }
+  }
    return frequencies
 };
 
