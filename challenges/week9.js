@@ -95,7 +95,7 @@ const createMatrix = (n, fill) => {
   if (n === undefined) throw new Error("n is required");
   if (fill === undefined) throw new Error("fill is required");
   let matrix=[]
-  matrix= (Array(n).fill(Array(n).fill()))
+  matrix= (Array(n).fill(Array(n).fill(fill)))
   return matrix
   
 };
@@ -115,6 +115,16 @@ const createMatrix = (n, fill) => {
 const areWeCovered = (staff, day) => {
   if (staff === undefined) throw new Error("staff is required");
   if (day === undefined) throw new Error("day is required");
+  let daycount=0;
+  staff.forEach(n=>{
+    if(n.rota.includes(day)){
+      daycount+=1
+    }
+  })
+  if (daycount >=3){
+    return true
+  }
+  else return false
 };
 
 module.exports = {
