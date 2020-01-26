@@ -44,7 +44,34 @@ describe("isItPrime", () => {
         expect(isItPrime(987)).toBe(false);
         expect(isItPrime(13)).toBe(true);
         expect(isItPrime(1)).toBe(false);
-
-        
     });
   });
+
+describe("createMatrix", () =>{
+    test("This function should receive a number and return an array of n arrays, each filled with n items.", ()=>{
+        expect(createMatrix(3, "foo")).toEqual(
+            [
+               ["foo", "foo", "foo"],
+               ["foo", "foo", "foo"],
+               ["foo", "foo", "foo"]
+            ]
+        );
+        expect(createMatrix(2, "happy")).toEqual(
+            [
+              ["happy","happy"],
+              ["happy","happy"]
+            ]
+        );
+        expect(createMatrix(5, "star")).toEqual(
+            [
+               ["star","star","star","star", "star"],
+               ["star","star","star","star", "star"],
+               ["star","star","star","star", "star"],
+               ["star","star","star","star", "star"],
+               ["star","star","star","star", "star"]
+            ]
+        );
+    })
+})
+
+
