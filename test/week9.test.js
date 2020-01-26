@@ -2,9 +2,9 @@ const {
     sumMultiples,
     isValidDNA,
     getComplementaryDNA,
-    // isItPrime,
-    // createMatrix,
-    // areWeCovered
+    isItPrime,
+    createMatrix,
+    areWeCovered
 } = require("../challenges/week9");
 
 describe("sumMultiples", () => {
@@ -37,3 +37,14 @@ describe("getComplementaryDNA",()=>{
     })
 });
 
+describe("isItPrime", () => {
+    test("This function should receive a number and return true/false depending on whether it is a prime number or not."
+      , () => {
+        expect(isItPrime(23)).toBe(true);
+        expect(isItPrime(987)).toBe(false);
+        expect(isItPrime(13)).toBe(true);
+        expect(isItPrime(1)).toBe(false);
+
+        
+    });
+  });
