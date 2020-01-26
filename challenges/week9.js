@@ -6,6 +6,13 @@
  */
 const sumMultiples = arr => {
   if (arr === undefined) throw new Error("arr is required");
+  let total = 0
+  arr.forEach(n => {
+    if (n % 5 === 0 || n % 3 === 0) {
+      total += n
+    }
+  })
+  return total;
 };
 
 /**
@@ -15,6 +22,17 @@ const sumMultiples = arr => {
  */
 const isValidDNA = str => {
   if (str === undefined) throw new Error("str is required");
+  //check every char is c|G|T|A  
+  //ignore case
+  let dnaModel = ["C", "G", "T", "A"]
+  let dnaUpper = str.toUpperCase().split("")
+  let ans = true
+  dnaUpper.forEach(n => {
+    if (!dnaModel.includes(n)) {
+      ans = false
+    }
+  })
+  return ans
 };
 
 /**
@@ -24,6 +42,23 @@ const isValidDNA = str => {
  */
 const getComplementaryDNA = str => {
   if (str === undefined) throw new Error("str is required");
+  let compDNA = [];
+  let dnaUpper = str.toUpperCase();
+  for (let i = 0; i < dnaUpper.length; i++) {
+    if (dnaUpper[i] === "C") {
+      compDNA.push("G")
+    }
+    else if (dnaUpper[i] === "G") {
+      compDNA.push("C")
+    }
+    else if (dnaUpper[i] === "T") {
+      compDNA.push("A")
+    }
+    else if (dnaUpper[i] === "A") {
+      compDNA.push("T")
+    }
+  }
+  return (compDNA.join(""))
 };
 
 /**
