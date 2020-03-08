@@ -63,23 +63,26 @@ const createRange = (start, end, step) => {
 const getScreentimeAlertList = (users, date) => {
   if (users === undefined) throw new Error("users is required");
   if (date === undefined) throw new Error("date is required");
+  //the final array initiated
   let userarray = [];
+  //filter the date from each user
+  //if the date matches check if the usage>100. if true push the username tothe final array
   users.forEach(user => {
-    let screendate = user.screenTime.filter(use => {
-      let dateused = use.date
-      if (screendate === dateused) {
-        let totusage
-        for (i = 0; i < user.usage.length; i++) {
-          let screenminutes = screenTime.usage[i]
-          totusage += Object.values(screenminutes)
-        }
-
+    let screendate = user.screenTime.filter(usageDate =>  date === usageDate.date );
+    //console.log(date, screendate)
+    if (screendate.length > 0) {
+      const totusage = Object.values(screendate[0].usage).reduce((total, amount) => total + amount, 0);
+      
+      if (totusage > 100) {
+        userarray.push(user.username)
       }
-    })
+    }
   })
-
   return userarray;
 };
+
+
+
 
 /**
  * This function will receive a hexadecimal color code in the format #FF1133. A hexadecimal code is a number written in hexadecimal notation, i.e. base 16. If you want to know more about hexadecimal notation:
@@ -93,6 +96,7 @@ const getScreentimeAlertList = (users, date) => {
  */
 const hexToRGB = hexStr => {
   if (hexStr === undefined) throw new Error("hexStr is required");
+
 };
 
 /**
@@ -107,7 +111,8 @@ const hexToRGB = hexStr => {
  */
 const findWinner = board => {
   if (board === undefined) throw new Error("board is required");
-  
+
+
 };
 
 module.exports = {

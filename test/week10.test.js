@@ -42,7 +42,7 @@ describe.only("getScreentimeAlertList", () => {
                 screenTime: [
                     { date: "2019-05-01", usage: { twitter: 34, instagram: 22, facebook: 40 } },
                     { date: "2019-05-02", usage: { twitter: 56, instagram: 40, facebook: 31 } },
-                    { date: "2019-05-03", usage: { twitter: 12, instagram: 15, facebook: 19 } },
+                    { date: "2019-05-03", usage: { twitter: 42, instagram: 55, facebook: 39 } },
                     { date: "2019-05-04", usage: { twitter: 10, instagram: 56, facebook: 61 } },
                 ]
             },
@@ -52,10 +52,47 @@ describe.only("getScreentimeAlertList", () => {
                 screenTime: [
                     { date: "2019-06-11", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 10 } },
                     { date: "2019-06-13", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 16 } },
-                    { date: "2019-06-14", usage: { mapMyRun: 0, whatsApp: 0, facebook: 0, safari: 31 } },
+                    { date: "2019-05-03", usage: { mapMyRun: 0, whatsApp: 40, facebook: 30, safari: 31 } },
                 ]
             },
         ];
-        expect(getScreentimeAlertList(users, "2019-05-04")).toEqual("beth_1234");
+        expect(getScreentimeAlertList(users, "2019-05-03")).toEqual(["beth_1234", "sam_j_1989"]);
+        expect(getScreentimeAlertList(users, "2019-05-04")).toEqual(["beth_1234"]);
     });
 });
+
+describe("hexToRGB", () => {
+    test("returns each hexadecimal value for R, G and B into its decimal equivalent", () => {
+        expect(hexToRGB("#FF1133")).toEqual(rgb(255,17,51));
+        expect(hexToRGB("#C0C0C0")).toBe(rgb(192,192,192));
+    });
+});
+
+describe("findWinner",()=> {
+    test("The function should return X if player X has won.", () => {
+        expect(findWinner([
+            ["X", "0", null],
+            ["X", null, "0"],
+            ["X", null, "0"]
+
+        ]).toEqual("X"))
+    })
+
+    test("The function should return 0 if the player 0 has won.", () => {
+        expect(findWinner([
+            ["X", "0", "X"],
+            ["0", "0", "X"],
+            ["X", "0", "0"]
+
+        ]).toEqual("0"))
+    })
+    test("The function should return null if there is currently no winner.", () => {
+        expect(findWinner([
+            ["0", "X", null],
+            [null, "X", "0"],
+            ["0", null, "X"]
+
+        ]).toEqual(null))
+    })
+
+})
