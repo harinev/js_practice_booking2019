@@ -4,13 +4,19 @@
  */
 const sumDigits = n => {
   if (n === undefined) throw new Error("n is required");
-  if (n < 0) throw new Error("n should be greater than 0");
+  // if (n < 0) throw new Error("n should be greater than 0");
   let sum = 0
-  while (n) {
-    sum += n % 10;
-    n = Math.floor(n / 10);
-  }
-  return sum
+  var array = n.toString()
+.split('')
+.map(function(item) {
+   
+   return parseInt(item);
+   
+})
+.reduce(function(previousValue, currentValue) {
+  return previousValue + currentValue;
+}, 0);
+  return array
 };
 
 /**
@@ -96,7 +102,12 @@ const getScreentimeAlertList = (users, date) => {
  */
 const hexToRGB = hexStr => {
   if (hexStr === undefined) throw new Error("hexStr is required");
-
+//convert hex to number
+//concat appropriately
+  const red=parseInt(hexStr.slice(1,3), 16)
+  const green=parseInt(hexStr.slice(3,5),16);
+  const blue=parseInt(hexStr.slice(5),16);
+  return "rgb(" + red + "," + +green + "," + +blue + ")";
 };
 
 /**
@@ -111,7 +122,7 @@ const hexToRGB = hexStr => {
  */
 const findWinner = board => {
   if (board === undefined) throw new Error("board is required");
-
+  
 
 };
 

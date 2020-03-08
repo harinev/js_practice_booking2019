@@ -12,12 +12,8 @@ describe("sumDigits", () => {
         expect(sumDigits(7687454)).toEqual(41);
 
     });
-
-    test("if number is negative", () => {
-        expect(sumDigits([-78])).toBe(-15);
-    })
-
 });
+    
 
 describe("createRange", () => {
     test("Creates a range of numbers as an array.Taking start, end and step numbers. Get an array of numbers from start to end with incremantal of step", () => {
@@ -33,9 +29,9 @@ describe("createRange", () => {
 
 });
 
-describe.only("getScreentimeAlertList", () => {
+describe("getScreentimeAlertList", () => {
     test("should return an array of username of users who have used more than 100 minutes of screentime for a given date.", () => {
-        const users= [
+        const users = [
             {
                 username: "beth_1234",
                 name: "Beth Smith",
@@ -63,12 +59,12 @@ describe.only("getScreentimeAlertList", () => {
 
 describe("hexToRGB", () => {
     test("returns each hexadecimal value for R, G and B into its decimal equivalent", () => {
-        expect(hexToRGB("#FF1133")).toEqual(rgb(255,17,51));
-        expect(hexToRGB("#C0C0C0")).toBe(rgb(192,192,192));
+        expect(hexToRGB("#FF1133")).toEqual("rgb(255,17,51)");
+        expect(hexToRGB("#C0C0C0")).toBe("rgb(192,192,192)");
     });
 });
 
-describe("findWinner",()=> {
+describe("findWinner", () => {
     test("The function should return X if player X has won.", () => {
         expect(findWinner([
             ["X", "0", null],
