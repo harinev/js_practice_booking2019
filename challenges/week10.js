@@ -2,22 +2,18 @@
  * This function takes a number, e.g. 123 and returns the sum of all its digits, e.g 6 in this example.
  * @param {Number} n
  */
+
 const sumDigits = n => {
   if (n === undefined) throw new Error("n is required");
-  // if (n < 0) throw new Error("n should be greater than 0");
   let sum = 0
-  var array = n.toString()
-.split('')
-.map(function(item) {
-   
-   return parseInt(item);
-   
-})
-.reduce(function(previousValue, currentValue) {
-  return previousValue + currentValue;
-}, 0);
-  return array
-};
+  let numToStr = n.toString().split("")
+  for (let i = 0; i < numToStr.length; i++) {
+
+    sum = sum + parseInt(numToStr[i])
+  }
+  return sum
+}
+
 
 /**
  * This function creates a range of numbers as an array. It received a start, an end and a step. Step is the gap between numbers in the range. For example, if start = 3, end = 11 and step = 2 the resulting range would be: [3, 5, 7, 9, 11]
@@ -31,11 +27,17 @@ const createRange = (start, end, step) => {
   if (start === undefined) throw new Error("start is required");
   if (end === undefined) throw new Error("end is required");
   let numarr = [];
-  for (let i = start; i <= end; i + step) {
+  if (typeof(step)===undefined){
+    step===1
+  } 
+  for (let i = start; i <= end; i=i + step) {
     numarr.push(i)
   }
+
   return numarr
 };
+
+
 
 /**
  * This function takes an array of user objects and their usage in minutes of various applications. The format of the data should be as follows:
@@ -74,11 +76,11 @@ const getScreentimeAlertList = (users, date) => {
   //filter the date from each user
   //if the date matches check if the usage>100. if true push the username tothe final array
   users.forEach(user => {
-    let screendate = user.screenTime.filter(usageDate =>  date === usageDate.date );
+    let screendate = user.screenTime.filter(usageDate => date === usageDate.date);
     //console.log(date, screendate)
     if (screendate.length > 0) {
       const totusage = Object.values(screendate[0].usage).reduce((total, amount) => total + amount, 0);
-      
+
       if (totusage > 100) {
         userarray.push(user.username)
       }
@@ -102,11 +104,11 @@ const getScreentimeAlertList = (users, date) => {
  */
 const hexToRGB = hexStr => {
   if (hexStr === undefined) throw new Error("hexStr is required");
-//convert hex to number
-//concat appropriately
-  const red=parseInt(hexStr.slice(1,3), 16)
-  const green=parseInt(hexStr.slice(3,5),16);
-  const blue=parseInt(hexStr.slice(5),16);
+  //convert hex to number
+  //concat appropriately
+  const red = parseInt(hexStr.slice(1, 3), 16)
+  const green = parseInt(hexStr.slice(3, 5), 16);
+  const blue = parseInt(hexStr.slice(5), 16);
   return "rgb(" + red + "," + +green + "," + +blue + ")";
 };
 
@@ -122,7 +124,7 @@ const hexToRGB = hexStr => {
  */
 const findWinner = board => {
   if (board === undefined) throw new Error("board is required");
-  
+
 
 };
 
