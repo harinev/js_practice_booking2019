@@ -4,27 +4,27 @@ const {
     getScreentimeAlertList,
     hexToRGB,
     findWinner
-} = require("../challenges/week10");
+  } = require("../challenges/week10");
 
 describe("sumDigits", () => {
     test("Takes a number and returns the sum of all its digits", () => {
-        expect(sumDigits(1234)).toEqual(10);
-        expect(sumDigits(7687454)).toEqual(41);
-
+      expect(sumDigits(1234)).toBe(10);
+      expect(sumDigits(7687454)).toBe(41);
+      expect(sumDigits(0)).toBe(0);
     });
 });
     
 
 describe("createRange", () => {
-    test("Creates a range of numbers as an array.Taking start, end and step numbers. Get an array of numbers from start to end with incremantal of step", () => {
-        expect(createRange(2, 10, 2).toBe([2, 4, 6, 8, 10]));
-        expect(createRange(11, 41, 10).toBe([11, 21, 31, 41]));
-
-
-    });
+    test(" Get an array of numbers from start to end with incremantal of step", () => {
+        expect(createRange(1, 2, 1)).toEqual([1, 2]);
+        expect(createRange(2, 10, 2)).toEqual([2,4,6,8,10]);
+        expect(createRange(11, 41, 10)).toEqual([11,21,31,41]);
+      });
+    
 
     test("if only start and end is given go with step 1 as increment", () => {
-        expect(createRange(45, 47).toBe([45, 46, 47]));
+        expect(createRange(45, 51)).toEqual([45, 46, 47, 48, 49, 50, 51]);
     })
 
 });
@@ -65,30 +65,35 @@ describe("hexToRGB", () => {
 });
 
 describe("findWinner", () => {
-    test("The function should return X if player X has won.", () => {
+    test("returns X if player X has won", () => {
         expect(findWinner([
             ["X", "0", null],
             ["X", null, "0"],
             ["X", null, "0"]
-
-        ]).toEqual("X"))
-    })
-
-    test("The function should return 0 if the player 0 has won.", () => {
-        expect(findWinner([
-            ["X", "0", "X"],
-            ["0", "0", "X"],
-            ["X", "0", "0"]
-
-        ]).toEqual("0"))
-    })
-    test("The function should return null if there is currently no winner.", () => {
+        ])).toEqual("X")
+    });
+    
+    test("returns 0 if player 0 has won", () => {
         expect(findWinner([
             ["0", "X", null],
-            [null, "X", "0"],
-            ["0", null, "X"]
+            ["X", "0", null],
+            ["X", null, "0"]
+        ])).toEqual("0")
+    });
+    
+    test("returns null if all boxes full and no winner", () => {
+        expect(findWinner(
+            [["X", "0", "0"],
+            ["0", "X", "X"],
+            ["X", "X", "0"]]
+            )).toEqual(null)
+        });
 
-        ]).toEqual(null))
-    })
-
+    test("returns null if game still in progress and no winner yet", () => {
+        expect(findWinner([
+            ["X", null, "0"],
+            ["0", null, "X"],
+            [null, "X", "0"]
+        ])).toEqual(null)
+    });
 })

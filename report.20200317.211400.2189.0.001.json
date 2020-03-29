@@ -1,0 +1,563 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200317.211400.2189.0.001.json",
+    "dumpEventTime": "2020-03-17T21:14:00Z",
+    "dumpEventTimeStamp": "1584479640239",
+    "processId": 2189,
+    "cwd": "/mnt/c/Users/harin/techreturner_work/week1/js_practice_booking2019",
+    "commandLine": [
+      "/home/harine/.nvm/versions/node/v13.0.1/bin/node",
+      "/mnt/c/Users/harin/techreturner_work/week1/js_practice_booking2019/node_modules/jest-worker/build/workers/processChild.js"
+    ],
+    "nodejsVersion": "v13.0.1",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "13.0.1",
+      "v8": "7.8.279.17-node.14",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.0.1/node-v13.0.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.0.1/node-v13.0.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-18362-Microsoft",
+    "osVersion": "#476-Microsoft Fri Nov 01 16:53:00 PST 2019",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 722900,
+        "nice": 0,
+        "sys": 2695300,
+        "idle": 22403200,
+        "irq": 1248400
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 266400,
+        "nice": 0,
+        "sys": 948200,
+        "idle": 24606800,
+        "irq": 303900
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 1608200,
+        "nice": 0,
+        "sys": 1229800,
+        "idle": 22983400,
+        "irq": 58100
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 474000,
+        "nice": 0,
+        "sys": 430700,
+        "idle": 24916700,
+        "irq": 3100
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 837000,
+        "nice": 0,
+        "sys": 1031200,
+        "idle": 23953200,
+        "irq": 10700
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 361400,
+        "nice": 0,
+        "sys": 339500,
+        "idle": 25120600,
+        "irq": 4500
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 670000,
+        "nice": 0,
+        "sys": 734000,
+        "idle": 24417500,
+        "irq": 7000
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 386700,
+        "nice": 0,
+        "sys": 439200,
+        "idle": 24995600,
+        "irq": 6000
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 520600,
+        "nice": 0,
+        "sys": 603100,
+        "idle": 24697800,
+        "irq": 9300
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 360600,
+        "nice": 0,
+        "sys": 828400,
+        "idle": 24632500,
+        "irq": 278200
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 547000,
+        "nice": 0,
+        "sys": 601700,
+        "idle": 24672800,
+        "irq": 8700
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz",
+        "speed": 2208,
+        "user": 338100,
+        "nice": 0,
+        "sys": 591500,
+        "idle": 24891800,
+        "irq": 6400
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wifi0",
+        "internal": false,
+        "mac": "98:3b:8f:ac:9c:a2",
+        "address": "192.168.1.90",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wifi0",
+        "internal": false,
+        "mac": "98:3b:8f:ac:9c:a2",
+        "address": "fe80::cc53:da34:9dbf:e58e",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 19
+      }
+    ],
+    "host": "TheEpicLaptop"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b0d955",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000009e9573",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b4333e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b436b9",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf0495",
+      "symbol": " [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cc82b3",
+      "symbol": "v8::internal::Factory::NewUninitializedFixedArray(int, v8::internal::AllocationType) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000e37241",
+      "symbol": " [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000e374dd",
+      "symbol": " [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000fe1d5b",
+      "symbol": "v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    },
+    {
+      "pc": "0x000000000138df79",
+      "symbol": " [/home/harine/.nvm/versions/node/v13.0.1/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2778898432,
+    "totalCommittedMemory": 2777689360,
+    "usedMemory": 2731699024,
+    "availableMemory": 16759296,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33541664,
+        "capacity": 16759296,
+        "used": 0,
+        "available": 16759296
+      },
+      "old_space": {
+        "memorySize": 42315776,
+        "committedMemory": 41698184,
+        "capacity": 30075800,
+        "used": 30075800,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 692224,
+        "committedMemory": 491616,
+        "capacity": 412992,
+        "used": 412992,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 2101248,
+        "committedMemory": 1952200,
+        "capacity": 1292400,
+        "used": 1292400,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1797410816,
+        "committedMemory": 1797410816,
+        "capacity": 1797371360,
+        "used": 1797371360,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 902512640,
+        "committedMemory": 902512640,
+        "capacity": 902510880,
+        "used": 902510880,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 3.01562,
+    "kernelCpuSeconds": 3.70312,
+    "cpuConsumptionPercent": 111.979,
+    "maxRss": 2803482624,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 694136
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 2.65625,
+    "kernelCpuSeconds": 3.625,
+    "cpuConsumptionPercent": 104.688,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "npm_config_cache_lock_stale": "60000",
+    "npm_config_ham_it_up": "",
+    "npm_config_legacy_bundling": "",
+    "npm_config_sign_git_tag": "",
+    "USER": "harine",
+    "npm_package_devDependencies_jest": "^24.5.0",
+    "npm_config_user_agent": "npm/6.12.0 node/v13.0.1 linux x64",
+    "npm_config_always_auth": "",
+    "npm_package_bugs_url": "https://github.com/techreturners/javascript_practice/issues",
+    "npm_config_bin_links": "true",
+    "npm_config_key": "",
+    "npm_config_allow_same_version": "",
+    "npm_config_description": "true",
+    "npm_config_fetch_retries": "2",
+    "npm_config_heading": "npm",
+    "npm_config_if_present": "",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_user": "1000",
+    "npm_node_execpath": "/home/harine/.nvm/versions/node/v13.0.1/bin/node",
+    "SHLVL": "1",
+    "npm_config_prefer_online": "",
+    "npm_config_noproxy": "",
+    "HOME": "/home/harine",
+    "OLDPWD": "/mnt/c/Users/harin/techreturner_work/week1",
+    "npm_config_force": "",
+    "NVM_BIN": "/home/harine/.nvm/versions/node/v13.0.1/bin",
+    "NVM_NODEJS_ORG_MIRROR": "https://nodejs.org/dist",
+    "npm_config_only": "",
+    "npm_config_read_only": "",
+    "npm_config_cache_min": "10",
+    "npm_config_init_license": "ISC",
+    "npm_config_editor": "vi",
+    "npm_config_rollback": "true",
+    "npm_config_tag_version_prefix": "v",
+    "npm_config_cache_max": "Infinity",
+    "npm_config_timing": "",
+    "npm_config_userconfig": "/home/harine/.npmrc",
+    "npm_config_engine_strict": "",
+    "npm_config_init_author_name": "",
+    "npm_config_init_author_url": "",
+    "npm_config_preid": "",
+    "npm_config_tmp": "/tmp",
+    "WSL_DISTRO_NAME": "Ubuntu",
+    "npm_package_description": "A repository of JavaScript challenges for you to work on throughout the course",
+    "npm_config_depth": "Infinity",
+    "npm_config_package_lock_only": "",
+    "npm_config_save_dev": "",
+    "npm_config_usage": "",
+    "NVM_DIR": "/home/harine/.nvm",
+    "npm_package_homepage": "https://github.com/techreturners/javascript_practice#readme",
+    "npm_package_readmeFilename": "README.md",
+    "npm_config_metrics_registry": "https://registry.npmjs.org/",
+    "npm_config_cafile": "",
+    "npm_config_otp": "",
+    "npm_config_package_lock": "true",
+    "npm_config_progress": "true",
+    "npm_config_https_proxy": "",
+    "npm_config_save_prod": "",
+    "npm_config_audit": "true",
+    "npm_config_cidr": "",
+    "npm_config_onload_script": "",
+    "npm_config_sso_type": "oauth",
+    "LOGNAME": "harine",
+    "npm_config_rebuild_bundle": "true",
+    "npm_config_save_bundle": "",
+    "npm_config_shell": "/bin/bash",
+    "NAME": "TheEpicLaptop",
+    "_": "/home/harine/.nvm/versions/node/v13.0.1/bin/npm",
+    "npm_config_dry_run": "",
+    "npm_config_format_package_lock": "true",
+    "npm_config_prefix": "/home/harine/.nvm/versions/node/v13.0.1",
+    "npm_config_scope": "",
+    "npm_config_browser": "",
+    "npm_config_cache_lock_wait": "10000",
+    "npm_config_ignore_prepublish": "",
+    "npm_config_registry": "https://registry.npmjs.org/",
+    "npm_config_save_optional": "",
+    "npm_config_searchopts": "",
+    "npm_config_versions": "",
+    "TERM": "xterm-256color",
+    "npm_config_cache": "/home/harine/.npm",
+    "npm_config_proxy": "",
+    "npm_config_send_metrics": "",
+    "npm_config_global_style": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_version": "",
+    "npm_config_local_address": "",
+    "npm_config_viewer": "man",
+    "npm_config_node_gyp": "/home/harine/.nvm/versions/node/v13.0.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
+    "PATH": "/home/harine/.nvm/versions/node/v13.0.1/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/mnt/c/Users/harin/techreturner_work/week1/js_practice_booking2019/node_modules/.bin:/home/harine/.nvm/versions/node/v13.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_1804.2020.5.0_x64__79rhkp1fndgsc:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/harin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/harin/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin",
+    "NVM_IOJS_ORG_MIRROR": "https://iojs.org/dist",
+    "npm_package_name": "javascript_practice",
+    "npm_package_repository_type": "git",
+    "npm_config_audit_level": "low",
+    "npm_config_prefer_offline": "",
+    "NODE": "/home/harine/.nvm/versions/node/v13.0.1/bin/node",
+    "npm_config_color": "true",
+    "npm_config_sign_git_commit": "",
+    "npm_config_fetch_retry_mintimeout": "10000",
+    "npm_config_maxsockets": "50",
+    "npm_config_offline": "",
+    "npm_config_sso_poll_frequency": "500",
+    "LANG": "C.UTF-8",
+    "npm_package_devDependencies_eslint": "^5.15.1",
+    "npm_config_umask": "0000",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "npm_package_main": "index.js",
+    "npm_package_gitHead": "91ee2b6a918efe83b1a1515bb8631c18eb344242",
+    "npm_config_fetch_retry_maxtimeout": "60000",
+    "npm_config_loglevel": "notice",
+    "npm_config_logs_max": "10",
+    "npm_config_message": "%s",
+    "npm_lifecycle_script": "jest",
+    "npm_package_scripts_test": "jest",
+    "npm_config_ca": "",
+    "npm_config_cert": "",
+    "npm_config_global": "",
+    "npm_config_link": "",
+    "SHELL": "/bin/bash",
+    "npm_package_version": "1.0.0",
+    "npm_package_repository_url": "git+https://github.com/techreturners/javascript_practice.git",
+    "npm_config_access": "",
+    "npm_config_also": "",
+    "npm_config_save": "true",
+    "npm_config_unicode": "true",
+    "npm_lifecycle_event": "test",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"test\"],\"original\":[\"test\"]}",
+    "npm_config_before": "",
+    "npm_config_long": "",
+    "npm_config_production": "",
+    "npm_config_searchlimit": "20",
+    "npm_config_unsafe_perm": "true",
+    "npm_config_update_notifier": "true",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "npm_config_auth_type": "legacy",
+    "npm_config_node_version": "13.0.1",
+    "npm_config_tag": "latest",
+    "npm_config_git_tag_version": "true",
+    "npm_config_commit_hooks": "true",
+    "npm_config_script_shell": "",
+    "npm_config_shrinkwrap": "true",
+    "npm_package_license": "MIT",
+    "npm_config_fetch_retry_factor": "10",
+    "npm_config_save_exact": "",
+    "npm_config_strict_ssl": "true",
+    "npm_config_dev": "",
+    "npm_config_globalconfig": "/home/harine/.nvm/versions/node/v13.0.1/etc/npmrc",
+    "npm_config_init_module": "/home/harine/.npm-init.js",
+    "npm_config_parseable": "",
+    "PWD": "/mnt/c/Users/harin/techreturner_work/week1/js_practice_booking2019",
+    "npm_config_globalignorefile": "/home/harine/.nvm/versions/node/v13.0.1/etc/npmignore",
+    "npm_execpath": "/home/harine/.nvm/versions/node/v13.0.1/lib/node_modules/npm/bin/npm-cli.js",
+    "NVM_CD_FLAGS": "",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "npm_package_author_name": "Tech Returners",
+    "npm_config_cache_lock_retries": "10",
+    "npm_config_searchstaleness": "900",
+    "npm_config_node_options": "",
+    "npm_config_save_prefix": "^",
+    "npm_config_scripts_prepend_node_path": "warn-only",
+    "npm_config_group": "1000",
+    "npm_config_init_author_email": "",
+    "npm_config_searchexclude": "",
+    "HOSTTYPE": "x86_64",
+    "MANPATH": "/home/harine/.nvm/versions/node/v13.0.1/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man",
+    "npm_config_git": "git",
+    "npm_config_optional": "true",
+    "WSLENV": "",
+    "npm_package_scripts_eslint": "eslint ./",
+    "npm_config_json": "",
+    "INIT_CWD": "/mnt/c/Users/harin/techreturner_work/week1/js_practice_booking2019",
+    "NODE_ENV": "test",
+    "JEST_WORKER_ID": "0",
+    "FORCE_COLOR": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 8388608
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 7823,
+      "hard": 7823
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
